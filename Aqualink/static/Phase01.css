@@ -1,0 +1,549 @@
+.cards {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    margin: 0;
+    background-color: #f7f9fc;
+}
+.container {
+    text-align: center;
+    min-height: 300px;
+    max-width: 200px;
+    padding: 20px;
+    margin-right: 10px;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+}
+.container h1 {
+    font-size: 24px;
+    color: #333;
+}
+.container p {
+    color: #555;
+    margin-bottom: 20px;
+}
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+.price-tag {
+    position: absolute;
+    background-color: #007bff;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    min-width: 80px;
+}
+.price-tag::before {
+    content: '💧';
+    margin-right: 5px;
+}
+/* Customize position for each price tag */
+.price-5l {
+    align-items: center;
+    justify-items: center;
+}
+/* Modal Styles */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%; /* Adjust modal width */
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+#toggleToSupplier, #toggleToCustomer {
+    background-color: #004c97;
+    color: white;
+    padding: 8px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+#toggleToSupplier:hover, #toggleToCustomer:hover {
+    background-color: #003366;
+}
+
+button[type="submit"] {
+    background-color: #004c97;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #003366;
+}
+
+/* Two-column layout for login sections */
+.login-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.login-section {
+    width: 48%; /* Adjust width to allow side-by-side layout */
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+/* Image Styles */
+.login-image {
+    width: 100px; /* Adjust the image size */
+    height: 100px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Additional styling for forms */
+form {
+    margin: 20px 0;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Optional: Styling for the close button */
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Optional: Styling for the toggle buttons */
+button#toggleToSupplier, button#toggleToCustomer {
+    background-color: #004c97;
+    color: white;
+    font-size: 14px;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Modal Styles */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%; /* Adjust modal width */
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+#toggleToSupplier, #toggleToCustomer {
+    background-color: #004c97;
+    color: white;
+    padding: 8px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+#toggleToSupplier:hover, #toggleToCustomer:hover {
+    background-color: #003366;
+}
+
+button[type="submit"] {
+    background-color: #004c97;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #003366;
+}
+
+/* Two-column layout for login sections */
+.login-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.login-section {
+    width: 48%; /* Adjust width to allow side-by-side layout */
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Additional styling for forms */
+form {
+    margin: 20px 0;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Optional: Styling for the close button */
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* Modal Styles */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%; /* Adjust modal width */
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+#toggleToSupplier, #toggleToCustomer {
+    background-color: #004c97;
+    color: white;
+    padding: 8px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+#toggleToSupplier:hover, #toggleToCustomer:hover {
+    background-color: #003366;
+}
+
+button[type="submit"] {
+    background-color: #004c97;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #003366;
+}
+
+/* Two-column layout for login sections */
+.login-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.login-section {
+    width: 48%; /* Adjust width to allow side-by-side layout */
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Additional styling for forms */
+form {
+    margin: 20px 0;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Optional: Styling for the close button */
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    background-color: #004c97;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #003366;
+    border-radius: 5px;
+}
+
+/* Main Section */
+main {
+    margin: 20px;
+}
+
+#homepage {
+    text-align: center;
+    padding: 50px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+#homepage h2 {
+    font-size: 32px;
+    color: #004c97;
+}
+
+button {
+    background-color: #004c97;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #003366;
+}
+
+.testimonials {
+    margin-top: 30px;
+}
+
+.testimonials p {
+    font-style: italic;
+}
+
+.quick-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.quick-links ul li {
+    margin: 10px 0;
+}
+
+.quick-links ul li a {
+    color: #004c97;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.quick-links ul li a:hover {
+    color: #003366;
+}
+
+/* Sections */
+section {
+    padding: 40px 20px;
+    margin: 20px 0;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    font-size: 28px;
+    color: #004c97;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+section h3 {
+    font-size: 24px;
+    color: #333;
+    margin-top: 20px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form input, form textarea, form button {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    background-color: #004c97;
+    color: white;
+    border: none;
+}
+
+form button:hover {
+    background-color: #003366;
+}
+
+/* Social Media Links */
+.social-media {
+    list-style: none;
+    padding: 0;
+}
+
+.social-media li {
+    display: inline;
+    margin-right: 10px; /* Space between icons */
+}
+
+.social-media a {
+    text-decoration: none; /* Remove underline */
+    color: #333; /* Default color */
+}
+
+.social-media a:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+/* Footer */
+footer {
+    background-color: #004c97;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Modal (Login) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    float: right;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

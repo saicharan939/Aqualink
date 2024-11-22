@@ -1,0 +1,10 @@
+{
+    "customers": [
+        {"username": "customer1", "password": "password1"},
+        {"username": "customer2", "password": "password2"}
+    ],
+    "suppliers": [
+        {"username": "supplier1", "password": "password1"},
+        {"username": "supplier2", "password": "password2"}
+    ]
+}
